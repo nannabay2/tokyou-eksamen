@@ -5,12 +5,12 @@ export default function NewInSection() {
     const newInItems = products.slice(0, 4); // Get the first 4 items as "New In"
 
     return (
-        <section className="new.in">
+        <section className="new-in">
             <div className="new-in-grid">
-                {newInItems.map((items) => (
-                    <article key={items.id} className="new-in-card">
-                        <img src={items.image} alt={items.name} />
-                        <h3>{items.brand}</h3>
+                {newInItems.map((item) => (
+                    <article key={item.id} className="new-in-card">
+                        <img src={item.image} alt={item.name} />
+                        <h3>{item.brand}</h3>
                     </article>
                 ))}
             </div>

@@ -3,6 +3,8 @@
 
 import { NavLink } from "react-router";
 import NewInSection from "../components/NewInSection";
+import ShopGenderSection from "../components/ShopGenderSection";
+
 
 export default function HomePage() {
   return (
@@ -55,6 +57,7 @@ export default function HomePage() {
       </section>
 
       <NewInSection />
+      <ShopGenderSection />
     </main>
   );
 }

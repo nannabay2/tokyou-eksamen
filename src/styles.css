@@ -100,36 +100,111 @@ body {
 /* New in section */
 
 .new-in {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px;
   display: grid;
-  .grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 820px 364px; /* venstre produkter + højre tekst */
+  column-gap: 40px;
+  align-items: center;
+}
+
+.new-in-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+  align-items: start;
 }
 
 .new-in-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 220px;
   object-fit: cover;
-  background: #e8e8e8;
+  background: #ececec;
+  display: block;
 }
 
 .new-in-card h3 {
-  margin: 8px 0 0;
-  font-size: 18px;
+  margin: 10px 0 0;
+  font-family: Jost, sans-serif;
+  font-size: 38px;
+  font-weight: 500;
   text-transform: uppercase;
+  color: #101012;
+}
+
+.new-in-info {
+  text-align: right; /* New In på højre side */
+}
+
+.new-in-count {
+  margin: 0;
+  font-family: Jost, sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  color: #4d3a31;
 }
 
 .new-in-info h2 {
   margin: 0;
-  font-size: 48px;
-  color: var(--logo);
+  font-family: Jost, sans-serif;
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 1;
+  color: #d52522;
+}
+
+.new-in-info p {
+  margin: 8px 0 22px;
+  font-family: Jost, sans-serif;
+  font-size: 16px;
+  color: #4d3a31;
 }
 
 .new-in-info button {
-  margin-top: 12px;
-  background: #4a2d1b;
-  color: #fff;
+  background: #56331f;   /* brun farve som Figma */
+  color: #fffaf0;
   border: 0;
-  border-radius: 12px;
-  padding: 10px 22px;
+  border-radius: 16px;
+  padding: 10px 25px;
+  font-family: Jost, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
   cursor: pointer;
+}
+
+/*Shop gender section*/
+.shop-gender {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.shop-gender-card img,
+.shop-gender-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+  background: #e8e8e8;
+}
+
+.shop-gender-card h3 {
+  margin: 13px 0 4px;
+  font-family: Jost, sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #4d2f1f;
+  text-transform: uppercase;
+}
+
+.shop-gender-card p {
+  margin: 0;
+  font-family: Jost, sans-serif;
+  font-size: 14px;
+  color: #4d3a31;
 }
