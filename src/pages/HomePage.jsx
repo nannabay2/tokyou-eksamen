@@ -1,36 +1,50 @@
-import reactRouterLogo from "../assets/example.svg";
+
+
+
+import { NavLink } from "react-router";
 
 export default function HomePage() {
   return (
-    <>
-      <header>
-        <h1>Home</h1>
-      </header>
-      <main>
-        <p>Welcome to the home page...</p>
+    <main className="lp-page">
+      {/* 1 Top bar */}
+      <section className="lp-topbar">
+        <p> Sign Up Today And Get 5% Off Your First Order And Free Shipping, Always</p>
+        <p>Free Returns | We Arrenge Pickup From Your Home | Delivery Not Included</p>
+      </section>
 
-        <article>
-          <h2>Displaying images in React</h2>
+      {/* 2 Header / nav */}
+      <header className="lp-header">
+        <div className="lp-header-row">
+          <div className="lp-left">
+            <span>🇬🇧</span>
+            <span className="lp-search">SEARCH</span>
+        </div>
 
-          <h3>1. Import from src/assets</h3>
-          <p>
-            Import the image file at the top of your component. The image is bundled with your app and gets a unique
-            filename for better caching.
-          </p>
-          <img src={reactRouterLogo} alt="Example SVG" className="img-small" />
+        <div className="lp-logo">TOKYOU</div>
 
-          <h3>2. Public folder</h3>
-          <p>
-            Place the image in the /public folder and reference it by path. The file is served directly without any
-            processing.
-          </p>
-          <img src="logo.webp" alt="Favicon from public folder" className="img-small" />
+        <div className="lp-right">
+          <span>👤</span>
+          <span>♡</span>
+          <span>👜</span>
+        </div>
+        </div>
+    
+    <nav className="lp-menu">
+      <NavLink to="/products">NEW IN</NavLink>
+      <NavLink to="/mood">PICK A MOOD</NavLink>
+      <NavLink to="/women">WOMEN</NavLink>
+      <NavLink to="/men">MEN</NavLink>
+      <NavLink to="/designers">DESIGNERS</NavLink>
+      <NavLink to="/inspo">GET YOUR INSPO</NavLink>
+      <NavLink to="/sale" className="sale">SALE</NavLink>
+      </nav>
 
-          <h3>3. External URL</h3>
-          <p>Use a full URL to load an image from the internet, just like in regular HTML.</p>
-          <img src="https://picsum.photos/200" alt="Random external image" className="img-medium" />
-        </article>
-      </main>
-    </>
+    </header>
+    {/* 3 Hero */}
+    <section className="lp-hero">
+      <h1> FEATURED HERO VIDEO HERE</h1>
+    </section>
+    </main>
   );
 }
+
