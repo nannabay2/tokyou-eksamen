@@ -240,7 +240,7 @@
         "name": "Maje",
         "description": "Ribbed knitted sweater",
         "price": "3.200 DKK",
-        "image": "hhttps://cdn-images.farfetch-contents.com/32/63/40/83/32634083_63048860_1000.jpg",
+        "image": "https://cdn-images.farfetch-contents.com/32/63/40/83/32634083_63048860_1000.jpg",
         "Category": "sweaters",
         "brand": "Maje",
         "color": "off-white",
@@ -250,27 +250,68 @@
     
     {
         "id": 20,
-        "name": "Jill Sander",
-        "description": "T-shirt with logo press",
-        "price": "3.100 DKK",
-        "image": "https://cdn-images.farfetch-contents.com/19/38/97/30/19389730_42632282_1000.jpg",
-        "Category": "t-shirts",
-        "brand": "Jill Sander",
-        "color": "off-white",
+        "name": "American Vintage",
+        "description": "Neny bay sweater with stripes",
+        "price": "1.500 DKK",
+        "image": "https://cdn-images.farfetch-contents.com/32/57/35/51/32573551_62737895_1000.jpg",
+        "Category": "sweaters",
+        "brand": "American Vintage",
+        "color": "blue",
         "size": "M",
         "inStock": true
     },
     
     {
         "id": 21,
-        "name": "American Vintage",
-        "description": "Newbay sweater with stripes",
-        "price": "4.250 DKK",
-        "image": "https://cdn-images.farfetch-contents.com/31/84/43/96/31844396_64158959_1000.jpg",
-        "Category": "jackets",
-        "brand": "The Frankie Shop",
-        "color": "brown",
+        "name": "AVAVAV",
+        "description": "Printed satin button-up shirt xray",
+        "price": "2.900 DKK",
+        "image": "https://avavav.com/_next/image?url=https%3A%2F%2Favavav.centracdn.net%2Fclient%2Fdynamic%2Fimages%2F723_15e6c2033e-sam-shirt-x-ray_white-mega.jpg&w=3840&q=75",
+        "Category": "shirts",
+        "brand": "AVAVAV",
+        "color": "off-white",
+        "size": "M",
+        "inStock": true
+    },
+    
+    {
+        "id": 22,
+        "name": "AVAVAV",
+        "description": "Button-up shortsleeved shirt",
+        "price": "1.940 DKK",
+        "image": "https://avavav.com/_next/image?url=https%3A%2F%2Favavav.centracdn.net%2Fclient%2Fdynamic%2Fimages%2F730_92a6647667-siri-shirt-shortsleeved_brown-mega.jpg&w=3840&q=75",
+        "Category": "shirts",
+        "brand": "AVAVAV",
+        "color": "red",
+        "size": "M",
+        "inStock": true
+    },
+    
+    {
+        "id": 23,
+        "name": "Balenciaga",
+        "description": "Womens lace-up shirt in white ",
+        "price": "7.700 DKK",
+        "image": "https://balenciaga.dam.kering.com/asset/e0908740-b697-4371-b14d-39a1593c6319/Large/857835TRM289000_F.jpg?v=3",
+        "Category": "shirts",
+        "brand": "Balenciaga",
+        "color": "white",
+        "size": "M",
+        "inStock": true
+    },
+    
+    {
+        "id": 24,
+        "name": "Balenciaga",
+        "description": "Knotted cuff blouse in blue/white",
+        "price": "11.600 DKK",
+        "image": "https://balenciaga.dam.kering.com/m/66ecbd08dee6a09a/Large-830990TSO253965_F.jpg?v=3",
+        "Category": "shirts",
+        "brand": "Balenciaga",
+        "color": "blue",
         "size": "M",
         "inStock": true
     }
+    
+  
 ]
