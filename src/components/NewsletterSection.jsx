@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function NewsletterSection() {
+  const [langOpen, setLangOpen] = useState(false);
+
   return (
     <section className="newsletter">
       <div className="newsletter-left">
@@ -25,9 +29,25 @@ export default function NewsletterSection() {
         <p>For Any Enquiries Please Visit TO-K-YOU Customer Care</p>
         <h4>LOCATION &amp; LANGUAGE</h4>
         <div className="newsletter-lang">
-          <span>🇬🇧</span>
-          <span>English</span>
-          <span className="chevron">▾</span>
+          <button
+            type="button"
+            className="newsletter-lang-toggle"
+            onClick={() => setLangOpen((prev) => !prev)}
+            aria-expanded={langOpen}
+          >
+            <span>🇬🇧</span>
+            <span>English</span>
+            <span className="chevron">▾</span>
+          </button>
+          {langOpen && (
+            <div className="newsletter-lang-menu">
+              <button type="button">🇬🇧 English</button>
+              <button type="button">🇩🇰 Dansk</button>
+              <button type="button">🇸🇪 Svenska</button>
+              <button type="button">🇫🇷 Français</button>
+              <button type="button">🇩🇪 Deutsch</button>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
 
+import { useEffect, useMemo, useRef, useState } from "react";
+
 export default function FeelingSection() {
   const moods = [
     {
@@ -21,32 +23,126 @@ export default function FeelingSection() {
       title: "FEELING COOL",
       img: "https://i.pinimg.com/736x/03/6b/02/036b0253bc147c0f2f112ed058df999c.jpg",
     },
+    {
+      title: "FEELING BOLD",
+      img: "https://i.pinimg.com/736x/83/12/99/8312991febd02fd572cb7a95e1c3903c.jpg",
+    },
+    {
+      title: "FEELING CALM",
+      img: "https://i.pinimg.com/736x/ca/58/ea/ca58ea72bd1f7dfe1cd83a37f71195d0.jpg",
+    },
   ];
 
+  const sectionRef = useRef(null);
+  const [metrics, setMetrics] = useState({
+    cardWidth: 222,
+    gap: 16,
+    viewportWidth: 1174,
+    progressWidth: 640,
+    barWidth: 128,
+    visibleCount: 5,
+  });
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const readMetrics = () => {
+      if (!sectionRef.current) return;
+      const styles = getComputedStyle(sectionRef.current);
+      const getVar = (name, fallback) => {
+        const raw = styles.getPropertyValue(name).trim();
+        if (!raw || raw.endsWith("%")) return fallback;
+        const value = parseFloat(raw);
+        return Number.isFinite(value) ? value : fallback;
+      };
+
+      const cardWidth = getVar("--card-width", 222);
+      const gap = getVar("--card-gap", 16);
+      const viewportWidth =
+        getVar("--viewport-width", sectionRef.current.clientWidth) ||
+        sectionRef.current.clientWidth;
+      const progressWidth = getVar("--progress-width", 640);
+      const barWidth = getVar("--bar-width", 128);
+      const visibleCount = Math.max(
+        1,
+        Math.floor((viewportWidth + gap) / (cardWidth + gap))
+      );
+
+      setMetrics({
+        cardWidth,
+        gap,
+        viewportWidth,
+        progressWidth,
+        barWidth,
+        visibleCount,
+      });
+    };
+
+    readMetrics();
+    window.addEventListener("resize", readMetrics);
+    return () => window.removeEventListener("resize", readMetrics);
+  }, []);
+
+  const maxIndex = Math.max(0, moods.length - metrics.visibleCount);
+
+  useEffect(() => {
+    setIndex((prev) => Math.min(prev, maxIndex));
+  }, [maxIndex]);
+
+  const translateX = useMemo(() => {
+    return index * (metrics.cardWidth + metrics.gap);
+  }, [index, metrics.cardWidth, metrics.gap]);
+
+  const progress = useMemo(() => {
+    if (maxIndex === 0) return 0;
+    return index / maxIndex;
+  }, [index, maxIndex]);
+
   return (
-    <section className="feeling">
-      <div className="feeling-grid">
-        {moods.map((mood) => (
-          <article key={mood.title} className="feeling-card">
-            {mood.img ? (
-              <img src={mood.img} alt={mood.title} />
-            ) : (
-              <div className="feeling-placeholder" />
-            )}
-            <h3>{mood.title}</h3>
-          </article>
-        ))}
+    <section className="feeling" ref={sectionRef}>
+      <div className="feeling-viewport">
+        <div
+          className="feeling-track"
+          style={{ transform: `translateX(-${translateX}px)` }}
+        >
+          {moods.map((mood) => (
+            <article key={mood.title} className="feeling-card">
+              {mood.img ? (
+                <img src={mood.img} alt={mood.title} />
+              ) : (
+                <div className="feeling-placeholder" />
+              )}
+              <h3>{mood.title}</h3>
+            </article>
+          ))}
+        </div>
       </div>
 
       <div className="feeling-progress" aria-hidden="true">
-        <span className="feeling-progress-bar" />
+        <span
+          className="feeling-progress-bar"
+          style={{
+            transform: `translateX(${
+              progress * (metrics.progressWidth - metrics.barWidth)
+            }px)`,
+          }}
+        />
       </div>
 
-      <button className="arrow left" aria-label="Previous">
+      <button
+        className="arrow left"
+        aria-label="Previous"
+        onClick={() => setIndex((prev) => Math.max(0, prev - 1))}
+        disabled={index === 0}
+      >
         <span className="arrow-icon">←</span>
       </button>
 
-      <button className="arrow right" aria-label="Next">
+      <button
+        className="arrow right"
+        aria-label="Next"
+        onClick={() => setIndex((prev) => Math.min(maxIndex, prev + 1))}
+        disabled={index === maxIndex}
+      >
         <span className="arrow-icon">→</span>
       </button>
     </section>
