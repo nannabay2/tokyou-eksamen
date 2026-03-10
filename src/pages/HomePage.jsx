@@ -4,7 +4,8 @@
 import { NavLink } from "react-router";
 import NewInSection from "../components/NewInSection";
 import ShopGenderSection from "../components/ShopGenderSection";
-
+import MoodBannerSection from "../components/MoodBannerSection";
+import FeelingSecition from "../components/FeelingSection";
 
 export default function HomePage() {
   return (
@@ -58,6 +59,8 @@ export default function HomePage() {
 
       <NewInSection />
       <ShopGenderSection />
+      <MoodBannerSection />
+      <FeelingSecition />
     </main>
   );
 }

@@ -1,4 +1,7 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Mohave:wght@400&display=swap");
+
+
 :root {
   --bg: #fbfbfb;
   --text: #101012;
@@ -9,7 +12,7 @@
 body {
   margin: 0;
   background: var(--bg);
-  font font-family: Jost, sans-serif;
+  font-family: Jost, sans-serif;
   color: var(--text);
 }
 
@@ -19,6 +22,7 @@ body {
   background: var(--bg);
 }
 
+/* Topbar */
 .lp-topbar {
   height: 20px;
   background: var(--topbar);
@@ -33,53 +37,61 @@ body {
   margin: 0;
 }
 
+/* Header */
 .lp-header {
   background: var(--bg);
   border-bottom: 1px solid #ddd;
 }
 
+.lp-header-row {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
 
-  .lp-header-rod {
-    height: 96px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 28px;
-  }
+.lp-left,
+.lp-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  .lp-search {
-    font-size: 13px;
-    font-weight: 500;
-  }
+.lp-search {
+  font-size: 13px;
+  font-weight: 500;
+}
 
-  .lp-logo {
-    color: var(--logo);
-    font-size: 48px;
-    font-weight: 500;
-    letter-spacing: 1.92px;
-  }
+.lp-logo {
+  color: var(--logo);
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 1.92px;
+}
 
-  .lp-menu {
-    height: 41px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-  }
+.lp-menu {
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
 
-  .lp-menu a {
-    text-decoration: none;
-    color: var(--text);
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
+.lp-menu a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 
-  .lp-menu a.sale {
-    color: var(--logo);
-  }
+.lp-menu a.sale {
+  color: var(--logo);
+}
 
- .lp-hero {
+/* Hero */
+.lp-hero {
   height: 652px;
   display: grid;
   place-items: center;
@@ -89,7 +101,7 @@ body {
     linear-gradient(45deg, transparent 75%, #e3e3e3 75%),
     linear-gradient(-45deg, transparent 75%, #e3e3e3 75%);
   background-size: 56px 56px;
-  background-position: 0 0, 0 28px, 28px -28px, -28px 0px;
+  background-position: 0 0, 0 28px, 28px -28px, -28px 0;
 }
 
 .lp-hero h1 {
@@ -97,14 +109,13 @@ body {
   margin: 0;
 }
 
-/* New in section */
-
+/* New In */
 .new-in {
   max-width: 1280px;
   margin: 0 auto;
   padding: 56px;
   display: grid;
-  grid-template-columns: 820px 364px; /* venstre produkter + højre tekst */
+  grid-template-columns: 820px 364px;
   column-gap: 40px;
   align-items: center;
 }
@@ -134,7 +145,7 @@ body {
 }
 
 .new-in-info {
-  text-align: right; /* New In på højre side */
+  text-align: right;
 }
 
 .new-in-count {
@@ -162,7 +173,7 @@ body {
 }
 
 .new-in-info button {
-  background: #56331f;   /* brun farve som Figma */
+  background: #56331f;
   color: #fffaf0;
   border: 0;
   border-radius: 16px;
@@ -174,7 +185,7 @@ body {
   cursor: pointer;
 }
 
-/*Shop gender section*/
+/* Shop Gender */
 .shop-gender {
   max-width: 1280px;
   margin: 0 auto;
@@ -196,15 +207,132 @@ body {
 .shop-gender-card h3 {
   margin: 13px 0 4px;
   font-family: Jost, sans-serif;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 500;
-  color: #4d2f1f;
+  color: #472c1b;
   text-transform: uppercase;
 }
 
 .shop-gender-card p {
   margin: 0;
-  font-family: Jost, sans-serif;
-  font-size: 14px;
-  color: #4d3a31;
+  font-family: Mohave, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #2d2d2d;
 }
+
+/* Mood Banner */
+.mood-banner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+}
+
+.mood-banner img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.mood-overlay {
+  position: absolute;
+  left: 56px;
+  bottom: 84px;
+  z-index: 2;
+}
+
+.mood-overlay h2 {
+  margin: 0 0 10px;
+  color: #d52522;
+  font-family: Jost, sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mood-overlay button {
+  border: 0;
+  border-radius: 16px;
+  background: #fff;
+  color: #472c1b;
+  padding: 10px 24px;
+  font-family: Jost, sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Feeling Section */
+
+.feeling {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 56px 56px;
+  position: relative;   /* gør plads til absolutte pile */
+}
+
+.feeling-grid {
+  width: 1174px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 222px);
+  gap: 16px;
+}
+
+.feeling-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feeling-card img,
+.feeling-placeholder {
+  width: 222px;
+  height: 260px;        /* låser proportionerne */
+  object-fit: cover;
+  display: block;
+  background: #e8e8e8;
+}
+
+.feeling-progress {
+  width: 640px;
+  height: 2px;
+  background: #d9d9d9;
+  margin: 18px auto 0;
+  position: relative;
+}
+
+.feeling-progress-bar {
+  display: block;
+  width: 128px;
+  height: 2px;
+  background: #4a2d1b;
+}
+
+/* Pilene udenfor grid */
+.arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: #d52522;  /* rød kasse */
+  border: 0;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.arrow-icon {
+  color: rgba(255, 255, 255, 1.1); /* gennemsigtig pil */
+  font-size: 30px;
+}
+
+.arrow.left { left: 56px; }
+.arrow.right { right: 50px; }
