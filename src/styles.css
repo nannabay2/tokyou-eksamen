@@ -336,3 +336,342 @@ body {
 
 .arrow.left { left: 56px; }
 .arrow.right { right: 50px; }
+
+
+/* Sale Banner */
+
+.sale-banner {
+  width: 1280px;
+  height: 244px;
+  margin: 0 auto;
+  background: #060606;
+  display: grid;
+  grid-template-columns: 640px 180px 1fr;
+  align-items: center;
+  padding: 0 56px;
+  column-gap: 24px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.sale-left,
+.sale-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.sale-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sale-center img {
+  width: 160px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.sale-kicker {
+  margin: 0;
+  color: #ffffff;              /* BUTTON COLORS / TEXT COLOR */
+  font-size: 40px;
+  font-family: Mohave, sans-serif;
+  font-weight: 500;
+  line-height: 56px;
+  text-transform: uppercase;
+}
+
+.sale-big {
+  margin: 0;
+  color: #d52522;              /* LOGO COLOR */
+  font-size: 150px;
+  font-family: Jost, sans-serif;
+  font-weight: 500;
+  line-height: 150px;
+  white-space: nowrap;
+}
+
+.sale-right h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 75px;
+  font-family: Jost, sans-serif;
+  font-weight: 400;
+  line-height: 75px;
+}
+
+.sale-right p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 50px;
+  font-family: Jost, sans-serif;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.sale-right { text-align: right; }
+
+
+/* Denim Section */
+
+.denim-section {
+  width: 1168px;
+  margin: 112px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 352px);
+  column-gap: 56px;
+  row-gap: 0;
+}
+
+.denim-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5; /* 736x920 */
+  object-fit: cover;
+  display: block;
+}
+
+.denim-card h3 {
+  margin: 8px 0 2px;
+  color: #101012;
+  font-size: 40px;
+  font-family: Jost, sans-serif;
+  font-weight: 400;
+  line-height: 58px;
+  text-transform: uppercase;
+}
+
+.denim-card p {
+  margin: 0 0 6px;
+  color: #2d2d2d;
+  font-size: 20px;
+  font-family: Mohave, sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.denim-card a {
+  color: #101012;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* Worn By You */
+.worn-by {
+  max-width: 1280px;
+  margin: 24px auto 0;
+  padding: 0 56px 32px;
+  position: relative;
+}
+
+.worn-by-header {
+  text-align: right;
+  margin-bottom: 12px;
+  color: #2d2d2d;
+}
+
+.worn-by-lead {
+  margin: 0;
+  font-size: 12px;
+  font-family: Mohave, sans-serif;
+}
+
+.worn-by-sub {
+  margin: 0;
+  font-size: 12px;
+  font-family: Mohave, sans-serif;
+}
+
+.worn-by-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 10px;
+  text-decoration: underline;
+  color: #2d2d2d;
+}
+
+.worn-by-strip {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  height: 250px;
+  overflow: hidden;
+}
+
+.worn-by-strip img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.worn-by-title {
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  margin: 0;
+  font-size: 64px;
+  font-family: Jost, sans-serif;
+  font-weight: 500;
+  color: #d52522;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Newsletter */
+.newsletter {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #c9c7a1;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 32px;
+  padding: 32px 56px;
+  color: #2d2d2d;
+  box-sizing: border-box;
+}
+
+.newsletter-left h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-family: Jost, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.newsletter-left p {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-family: Mohave, sans-serif;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 16px;
+  border: 1px solid #a8a68a;
+  background: #f7f6e8;
+  font-family: Jost, sans-serif;
+}
+
+.newsletter-form button {
+  background: #56331f;
+  color: #fff;
+  border: 0;
+  border-radius: 16px;
+  padding: 10px 18px;
+  font-family: Jost, sans-serif;
+  cursor: pointer;
+}
+
+.newsletter-social {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-social .social {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #b6b48f;
+  font-size: 12px;
+}
+
+.newsletter-divider {
+  width: 1px;
+  background: #a4a284;
+}
+
+.newsletter-right h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-family: Jost, sans-serif;
+  text-transform: uppercase;
+}
+
+.newsletter-right p {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-family: Mohave, sans-serif;
+}
+
+.newsletter-lang {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.newsletter-lang .chevron {
+  font-size: 12px;
+}
+
+/* Footer */
+.site-footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 56px 24px;
+  background: #f3f3f3;
+  color: #2d2d2d;
+  box-sizing: border-box;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+}
+
+.footer-col h5 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 12px;
+  color: #2d2d2d;
+  text-decoration: none;
+  margin: 4px 0;
+}
+
+.payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.payment-icons span {
+  border: 1px solid #c9c9c9;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 10px;
+  background: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 10px;
+  color: #777;
+}

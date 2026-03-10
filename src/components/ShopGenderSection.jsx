@@ -12,7 +12,10 @@ export default function ShopGenderSection() {
       </article>
 
       <article className="shop-gender-card">
-        <div className="shop-gender-placeholder" />
+        <img
+          src="https://i.pinimg.com/1200x/5e/6f/d4/5e6fd4fa8889579aed81d549bbeee1c8.jpg"
+          alt="Shop Men"
+        />
         <h3>SHOP MEN</h3>
         <p>lille sup head til edit</p>
       </article>

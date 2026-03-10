@@ -6,6 +6,11 @@ import NewInSection from "../components/NewInSection";
 import ShopGenderSection from "../components/ShopGenderSection";
 import MoodBannerSection from "../components/MoodBannerSection";
 import FeelingSecition from "../components/FeelingSection";
+import SaleBannerSection from "../components/SaleBannerSection";
+import DenimSection from "../components/DenimSection";
+import WornByYouSection from "../components/WornByYouSection";
+import NewsletterSection from "../components/NewsletterSection";
+import FooterSection from "../components/FooterSection";
 
 export default function HomePage() {
   return (
@@ -61,6 +66,11 @@ export default function HomePage() {
       <ShopGenderSection />
       <MoodBannerSection />
       <FeelingSecition />
+      <SaleBannerSection />
+      <DenimSection />
+      <WornByYouSection />
+      <NewsletterSection />
+      <FooterSection />
     </main>
   );
 }
